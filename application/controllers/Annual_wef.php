@@ -15,8 +15,18 @@ class Annual_wef extends Parent_admin_controller {
         
          $pageTitle = "Annual WEF New Delhi May 8 - 13th 2017";
          $data['page_title'] = "$pageTitle | " . SITE_NAME;
+         $data['title_name'] = $pageTitle;
            $this->load->get_view("annual_wef_view",$data);
 
+    }
+    
+    public function program_details(){
+        
+         $pageTitle = "WEF 2017 Program Details";
+         $data['page_title'] = "$pageTitle | " . SITE_NAME;
+         $data['title_name'] = $pageTitle;
+           $this->load->get_view("program_details_view",$data);
+        
     }
     
     

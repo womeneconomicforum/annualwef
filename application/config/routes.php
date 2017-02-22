@@ -59,3 +59,5 @@ $route['annual-wef-new-delhi-may-8-13th-2017']='annual_wef';
 
 $route['login-admin'] = 'admin/login';
 
+$route['wef-2017-program-details']='annual_wef/program_details';
+
