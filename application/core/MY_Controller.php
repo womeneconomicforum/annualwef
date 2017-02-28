@@ -2,36 +2,20 @@
 
 class MY_Controller extends CI_Controller {
 
-//    function __construct() {
-//        parent::__construct();
-//        $userDtl = get_session(USR_SESSION_NAME);
-//        define('USER_ID', $userDtl['id']);
-//        $this->load->model('Common_model', 'common');
-//    }
-//
-//    function is_logged() {
-//        if ($rs = get_session(USR_SESSION_NAME)) {
-//            return $rs;
-//        } else
-//            return false;
-//    }
-//
-//    function logged_data() {
-//        $data = get_session(USR_SESSION_NAME);
-//        return $data;
-//    }
-//
-//    function redirect_logged() {
-//        if ($dtl = $this->is_logged()) {
-//            redirect('dashboard');
-//        }
-//    }
-//
-//    function redirect_not_logged() {
-//        if (!$this->is_logged())
-//            redirect('login');
-//    }
-
+  //set the class variable.
+   var $template  = array();
+   var $data      = array();
+   //Load layout    
+   public function layout() {
+     // making temlate and send data to view.
+     $this->template['header'] = $this->load->view('admin/header', $this->data, true);
+     $this->template['topbar'] = $this->load->view('admin/topbar', $this->data, true);
+     $this->template['leftsidebar']= $this->load->view('admin/leftsidebar', $this->data, true);
+     $this->template['main'] = $this->load->view($this->main, $this->data, true);
+     $this->template['footerbar'] = $this->load->view('admin/footerbar', $this->data, true);
+     $this->template['footer'] = $this->load->view('admin/footer', $this->data, true);
+     $this->load->view('admin/index', $this->template);
+   }
 }
 
 class Parent_admin_controller extends MY_Controller {

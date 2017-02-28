@@ -27,6 +27,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- App js -->
         <script src="<?=base_url()?>assets/js/jquery.core.js"></script>
         <script src="<?=base_url()?>assets/js/jquery.app.js"></script>
+        
+        <script src="<?=base_url()?>assets/pages/jquery.fileuploads.init.js"></script>
+        
+        <script src="<?=base_url()?>assets/js/modernizr.min.js"></script>
 
     </body>
 

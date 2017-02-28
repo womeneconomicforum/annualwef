@@ -144,7 +144,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <li><a href="javascript:void(0)"><span class="badge badge-info pull-right">4</span>Settings</a></li>
                                     <li><a href="javascript:void(0)">Lock screen</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="javascript:void(0)">Logout</a></li>
+                                    <li><a href="<?=  base_url('admin/login/logOut'); ?>">Logout</a></li>
                                 </ul>
                             </li>
 

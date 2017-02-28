@@ -1,35 +1,4 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
-<!DOCTYPE html>
-<html>
-
-<?php include("header.php"); ?>
-
-
-    <body>
-
-        <!-- Begin page -->
-        <div id="wrapper">
-
-            <!-- Top Bar Start -->
-            <?=include("top-bar.php"); ?>
-            <!-- Top Bar End -->
-
-
-            <!-- ========== Left Sidebar Start ========== -->
-            <?=include("left-sidebar.php"); ?>
-            <!-- Left Sidebar End -->
-
-
-
-            <!-- ============================================================== -->
-            <!-- Start right Content here -->
-            <!-- ============================================================== -->
-            <div class="content-page">
-                <!-- Start content -->
-                <div class="content">
-                    <div class="container">
+<div class="container">
                         <div class="row">
 			<div class="col-xs-12">
 			<div class="page-title-box">
@@ -94,22 +63,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
                     </div> <!-- container -->
-
-                </div> <!-- content -->
-
-                <?php include("footer-bar.php"); ?>
-
-            </div>
-
-
-            <!-- ============================================================== -->
-            <!-- End Right content here -->
-            <!-- ============================================================== -->
-
-
-        </div>
-        <!-- END wrapper -->
-        <?=include("footer.php"); ?>
-
-
-        

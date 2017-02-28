@@ -17,12 +17,22 @@
                                 </div>
                                 <div class="account-content">
                                     
-                                    <form class="form-horizontal" action="<?= base_url('admin/login') ?>">
+                                    <?php
+                                    if(!empty($error))
+                                    {
+                                     ?>
+                                    <div class="alert alert-danger">
+                                        <strong>Sorry !</strong> <?=$error?>
+                                    </div>
+                                     <?php 
+                                    }
+                                    ?>
+                                    <form class="form-horizontal" method="POST" action="<?= base_url('admin/login') ?>">
 
                                         <div class="form-group m-b-25">
                                             <div class="col-xs-12">
                                                 <label for="emailaddress">User Name</label>
-                                                <input class="form-control input-lg" type="text" id="username" required="" placeholder="Enter your UserName">
+                                                <input class="form-control input-lg" type="text" name="username" id="username" required="" placeholder="Enter your UserName">
                                             </div>
                                         </div>
 
@@ -30,7 +40,7 @@
                                             <div class="col-xs-12">
                                                 <a href="<?= base_url('login/forgetPassword')?>" class="text-muted pull-right font-14">Forgot your password?</a>
                                                 <label for="password">Password</label>
-                                                <input class="form-control input-lg" type="password" required="" id="password" placeholder="Enter your password">
+                                                <input class="form-control input-lg" type="password" required=""  name="password" id="password" placeholder="Enter your password">
                                             </div>
                                         </div>
                                         <div class="row">

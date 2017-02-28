@@ -10,13 +10,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <ul class="metisMenu nav" id="side-menu">
                             <li class="menu-title">Navigation</li>
                             <li>
-                                <a href="index.html"><i class="fi-air-play"></i><span class="badge badge-success pull-right"></span> <span> Dashboard </span> </a>
+                                <a href="<?= base_url('admin/dashboard'); ?>"><i class="fi-air-play"></i><span class="badge badge-success pull-right"></span> <span> Dashboard </span> </a>
                             </li>
                             <li>
                                 <a href="javascript: void(0);" aria-expanded="true"><i class="fi-briefcase"></i> <span> Speakers </span> <span class="menu-arrow"></span></a>
                                 <ul class="nav-second-level nav" aria-expanded="true">
-                                    <li><a href="ui-typography.html">Add New Speakers</a></li>
-                                    <li><a href="ui-panels.html">View Speakers</a></li>
+                                    <li><a href="<?=  base_url('admin/speakers/Addspeakers'); ?>">Add New Speakers</a></li>
+                                    <li><a href="<?=  base_url('admin/speakers/index'); ?>">View Speakers</a></li>
                                     
                                 </ul>
                             </li>
