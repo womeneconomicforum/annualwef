@@ -30,7 +30,7 @@ class Speakers_Model extends CI_Model{
             'user_role'=>3,
             'username'=>$username,
             'password'=>  md5($this->get_random_password()),
-            'active'=>0,
+            'active'=>1,
             
         );
         
@@ -46,6 +46,49 @@ class Speakers_Model extends CI_Model{
         }else{
             return FALSE;
         }   
+    }
+    
+    public function viewSpeaker()
+    {
+        $this->db->where('status','1');
+        $this->db->where('user_role','3');
+        $this->db->order_by('id','DESC');
+        $query=$this->db->get('user_details');
+        if($query->num_rows()>=1)
+        {
+           return $query->result_array(); 
+        }
+        else{
+            return false;
+        }
+    }
+    
+    public function editSpeaker($id,$data){
+      $this->db->set($data);
+      $this->db->set('last_update','NOW()',FALSE);
+      $this->db->where('user_id',$id);
+      if($this->db->update('user_details')==TRUE){
+          return TRUE;  
+      }else{
+          return FALSE;
+      }
+    }
+    
+    public function deleteSpeaker($id){
+        $this->db->set('status','0');
+        $this->db->set('last_update','NOW()',FALSE);
+        $this->db->where('user_id',$id);
+        if($this->db->update('user_details'))
+        {
+          $this->db->set('active','0');
+          $this->db->set('last_update','NOW()',FALSE);
+          $this->db->where('user_id',$id); 
+          $this->db->update('users');
+          return TRUE;  
+        }else{
+            return FALSE;
+        }
+        
     }
 }
 ?>

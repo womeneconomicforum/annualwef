@@ -5,7 +5,8 @@ class Login extends CI_Controller
       parent::__construct();
   }  
   public function index(){
-      if(!empty($this->session->userdata('userid')))
+      $userid=$this->session->userdata('userid');
+      if(!empty($userid))
       {
           redirect('admin/dashboard');  
       }

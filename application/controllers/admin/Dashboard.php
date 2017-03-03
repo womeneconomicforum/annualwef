@@ -5,7 +5,8 @@ class Dashboard extends MY_Controller{
         parent::__construct();
     }
     public function index(){
-        if(!empty($userid=$this->session->userdata('userid')))
+        $userid=$this->session->userdata('userid');
+        if(!empty($userid))
         {
           $this->data['title']="Dashboard";
           $this->main = 'admin/dashboard'; // passing middle to function. change this for different views.

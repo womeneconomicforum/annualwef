@@ -14,7 +14,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-6  page-info">
-                <h1 class="h1-page-title"><?php echo $page_title; ?> </h1>				
+                <h1 class="h1-page-title"><?php echo $title_name; ?> </h1>				
             </div>
            
         </div>
@@ -47,7 +47,7 @@
 </style>
 <div class="row">
 <div class="col-sm-6">
-    <a href="<?php echo base_url(); ?>/wef-2017-program-details"><br />
+    <a href="<?php echo base_url(); ?>wef-2017-program-details"><br />
 <button class="button"> WEF 2017 Program Details/Themes </button></a>
 </div>
 <div class="col-sm-6">
